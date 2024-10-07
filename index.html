@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DERSİNE GİRİŞ</title>
+</head>
+
+<body>
+    <div><!--kapsayıcı etiket olarak kullanılır.-->
+        <div>block etiket</div>
+        <span>inline etiket, Satır içi eleman</span>
+    </div>
+
+    <!--METİN BİÇİMLENDİRME ETİKETLERİ-->
+    <p>merhaba ben <b>dilara </b>karaca</p>
+    <p>merhaba ben <strong>dilara </strong>karaca</p>
+    <p>merhaba ben <i>dilara </i>karaca</p>
+    <p>merhaba ben <em>dilara </em>karaca</p>
+    <p>merhaba ben <mark>dilara </mark>karaca</p>
+    <p>merhaba ben <br>dilara </br>karaca</p>
+    <p>merhaba ben <small>dilara </small>karaca</p>
+    <p>merhaba ben <s>dilara </s>karaca</p>
+    <p>merhaba ben <del>dilara </del>karaca</p>
+    <p>merhaba ben <ins>dilara </ins>karaca</p>
+    <p>merhaba ben <u>dilara </u>karaca</p>
+    <p>H<sub>2</sub>O</p>
+    <P>10<sup>2</sup></P>
+
+    <!--ALINTILAR-->
+    <p>Web standartlarını <abbr title="World Wide Web Consortium "> W3C</abbr> belirler.</p>
+    <p>Dilara Karaca diyor ki: <q>Başaracaksın</q></p>
+    <p>Wikipedia'ya göre W3C tanımı: </p>
+    <blockquote cite="https://tr.wikipedia.org/wiki/World_Wide_Web_Consortium">
+        Dünya Çapında Ağ Konsorsiyumu, Ekim 1994'te Ağ'ın mucidi Tim Berners-Lee tarafından
+        MIT ve CERN bünyesinde kurulmuş olan uluslararası Dünya Çapında Ağ standartlarını belirleyen örgüttür.
+    </blockquote>
+    <p>J.K.Rowling tarafından yazılan <cite>Harry Potter</cite> filminin ilk gösterimi 2002 de gerçekleşmiştir.</p>
+
+    <!--LİNK VERME-->
+    <a href="https://www.google.com.tr/?hl=tr" target="_self">Tıkladığında olduğun sayfada google açar</a><br>
+    <a href="https://www.google.com.tr/?hl=tr" target="_blank">Tıkladığında yeni sayfada google açar</a><br>
+    <a href="https://www.google.com.tr/?hl=tr" title="google">Üzerine gelindiğinde google yazar oldduğu sayfada google
+        açar</a><br>
+    <a href="./Kahve Evi.png">
+        <download>Resmi indir</download>
+    </a><br>
+    <a rel="nofollows" href="https://erbilen.net">erbilen.net</a><!--Bu sayfayı takip etme demek-->
+    <p>
+        <a href="#ders1">HTML DERS 1</a>
+        <a href="#ders2">HTML DERS 2</a>
+    </p>
+
+    <div id="ders1">
+        DERS1 başladı
+    </div>
+    <div id="ders2">
+        DERS1 başladı
+    </div>
+
+    <!--Resim Ekleme-->
+    <img src="Kahve Evi.png" alt="kahve resmi var"
+        title="Kahve Logo"><!--alt eğer resim yüklenmezse ne olduğunu belirtmek için kısa not kullanılır-->
+
+    <!--Tablo Yapımı-->
+
+    <table border="1">
+        <caption>Aylık Maaşım</caption>
+        <thead>
+            <tr>
+                <th>Ay</th>
+                <th>Maaş</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ocak</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Şubat</td>
+                <td>1</td>
+                <td rowspan="2">Hello</td>
+            </tr>
+            <tr>
+                <td>Mart</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Nisan</td>
+                <td>1</td>
+            </tr>
+        <tfoot>
+            <td colspan="3">Toplam: 1</td>
+        </tfoot>
+        </tbody>
+
+    </table>
+
+    <!-- Listeleme -->
+    <ul type="square"> <!-- circle , square, disc-->
+        <li>Sabah Kalk</li>
+        <li>Kahvaltı Yap</li>
+        <ul>
+            <li>Zeytin ye</li>
+        </ul>
+        <li>Diş Fırçala</li>
+    </ul>
+
+    <ol type="i" start="8">
+        <li>Merhaba</li>
+        <li>Merhaba 2</li>
+    </ol>
+
+
+    <!--Medya Etiketleri-->
+    <audio controls loop muted><!--loop müzük bitince tekrar başa döner çalmaya devam eder
+                                    muted ses kapalı olur otomatik-->
+        <source src="Arch Enemy - Exist to exit.mp3" type="audio/mpeg">
+    </audio>
+    <br>
+    <video controls poster="Kahve Evi.png" width="250px" height="200px">
+        <source src="test.mp4." type="video/mp4">
+        <track src="subtitle-en.vtt" kind="subtitles" srclang="en" label="ingilizce"> <!--altyazı ekleme-->
+    </video>
+
+    <br>
+
+    <!--Iframe-->
+
+    <iframe src="https://erbilen.net"></iframe>
+
+    <!--FORM ETİKETLERİ-->
+    <form action="" method="get">
+        <fieldset>
+            <legend>Giriş Yap</legend>
+            <label for="kadi">Kullanıcı Adı</label>
+            <input id="kadi" type="text"><br>
+
+            <label for="sifre">Şifre</label>
+            <input id="sifre" type="password"><br>
+        </fieldset>
+        <input type="file" accept="image/*"><br>
+
+        <label>
+            <input type="checkbox">Kabul ediyorum
+        </label><br>
+
+        <label>
+            <input type="radio" name="cinsiyet">Kadın
+        </label>
+        <label>
+            <input type="radio" name="cinsiyet">Erkek
+        </label>
+
+        <input type="submit">
+        <input type="reset"><br>
+
+        <input type="color"><br>
+        <input type="date"><br>
+        <input type="datetime-local"><br>
+        <input type="week"><br>
+        <input type="month"><br>
+        <input type="seearc"><br>
+
+        <input id="kadi" type="text" autocomplete="off"><br>
+
+        <select name="dil[]" multiple>
+            <optgroup label="Front-end Dilleri">
+                <option value="html">HTML</option>
+                <option selected value="css">CSS</option>
+                <option value="js">JS</option>
+            </optgroup>
+            <optgroup label="Back-end Dilleri">
+                <option value="Pyton">PYTHON</option>
+                <option value="PHP">PHP</option>
+                <option value="JS">JS</option>
+            </optgroup>
+        </select>
+
+    </form>
+</body>
+
+</html>
